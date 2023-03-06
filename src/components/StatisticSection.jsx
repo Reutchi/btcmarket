@@ -1,8 +1,6 @@
 import Icons from "../utils/data/icons.jsx";
 import ListCoins from "../utils/components/listCoins.jsx";
 
-import {Link} from "react-router-dom";
-import {Coin} from "../routes/index.jsx";
 
 const StatisticSection = ({coins}) => {
     
@@ -14,7 +12,7 @@ const StatisticSection = ({coins}) => {
 
 
     return(
-        <section className='w-full pb-96'>
+        <section className='w-full'>
             <div className='mx-auto border border-3xl w-[90%]  rounded-lg'>
                 <nav className='border-b'>
                     <ul className='flex justify-center space-x-10 pb-8 pt-6'>
