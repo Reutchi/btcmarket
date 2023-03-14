@@ -1,10 +1,10 @@
 import {HeroSection, StatisticSection, WhyBtcSection} from "../components/index.js";
 
-const MainPage = ({coins}) => {
+const MainPage = () => {
     return(
         <>
             <HeroSection/>
-            <StatisticSection coins={coins}/>
+            <StatisticSection/>
             <WhyBtcSection/>
         </>
     )
