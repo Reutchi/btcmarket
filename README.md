@@ -7,7 +7,7 @@
 Tailwind: DaisiUI,
 Axios
 
-Live preview: 👌🏻
+Live preview Netlify: https://sparkling-khapse-f869df.netlify.app/ 👌🏻
 
 
 
