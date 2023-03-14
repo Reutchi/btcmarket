@@ -3,9 +3,7 @@ import Button from "../utils/components/button.jsx";
 import Icons from "../utils/data/icons";
 
 const HeroSection = () => {
-
     const heroSection = {title:'Buy, sell and trade crypto today',description:'Trade with confidence and build your future with Australia’s fastest crypto exchange.'}
-
     return(
         <section className='container mx-auto p-6'>
             <div className='flex flex-col-reverse flex-col md:flex-row justify-between mt-32'>

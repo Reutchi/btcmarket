@@ -1,9 +1,18 @@
 import Icons from "../utils/data/icons.jsx";
 import ListCoins from "../utils/components/listCoins.jsx";
 
+import {useContext, useEffect} from "react";
+import {StatisticContext} from "../context/StatisticContext/StatisticProvider.jsx";
 
-const StatisticSection = ({coins}) => {
-    
+
+const StatisticSection = () => {
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+    const {coins,fetchData} = useContext(StatisticContext)
+
     const iconsCrypto = coins.filter((item) => {
         return item.image;
     }).map((item) => {
@@ -21,7 +30,6 @@ const StatisticSection = ({coins}) => {
                     </ul>
                 </nav>
                 <div className='flex justify-center'>
-
                     <table className='w-full'>
                         <tbody>
                             <tr className='text-left border-b'><th className='pl-5'>Asset</th><th className='py-6'>Last Price</th><th className='hidden md:table-cell'>24hr Change</th><th className='hidden md:table-cell'>Market Cap</th></tr>
