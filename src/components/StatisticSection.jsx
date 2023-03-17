@@ -3,11 +3,12 @@ import ListCoins from "../utils/components/listCoins.jsx";
 
 import {useContext, useEffect} from "react";
 import {StatisticContext} from "../context/StatisticContext/StatisticProvider.jsx";
+import {RingLoader} from "react-spinners";
 
 
 const StatisticSection = () => {
 
-    const {coins,fetchData} = useContext(StatisticContext)
+    const {coins,fetchData,isLoading} = useContext(StatisticContext)
 
     useEffect(() => {
         fetchData()
@@ -30,32 +31,29 @@ const StatisticSection = () => {
                         <li><a href="/">Top Movers</a></li>
                     </ul>
                 </nav>
-                <div className='flex justify-center'>
-                    <table className='w-full'>
-                        <tbody>
+                {isLoading ? <div className='flex justify-center'><RingLoader color='#36d7b7' /></div>
+                :<div className='flex justify-center'>
+                        <table className='w-full'>
+                            <tbody>
                             <tr className='text-left border-b'><th className='pl-5'>Asset</th><th className='py-6'>Last Price</th><th className='hidden md:table-cell'>24hr Change</th><th className='hidden md:table-cell'>Market Cap</th></tr>
-                        {coins.map((coin,index) => {
-                            return(
+                            {coins.map((coin,index) => {
+                                return(
                                     <ListCoins
                                         key={index}
                                         coin={coin}
                                     />
-
-                            )
-                        }).slice(0,5)
-                        }
-                        </tbody>
-                    </table>
-
-                </div>
-
-                <div className='flex items-center justify-center space-x-2 p-4'>
+                                )
+                            }).slice(0,5)
+                            }
+                            </tbody>
+                        </table>
+                    </div> }
+                 <div className='flex items-center justify-center space-x-2 p-4'>
                     {iconsCrypto}
                     <a href='/market'>View all markets</a>
                     <Icons.arrowVertical/>
                 </div>
             </div>
-
         </section>
     )
 }
