@@ -4,13 +4,17 @@ import {useParams} from "react-router-dom";
 import axios from "axios";
 import DOMPurify from 'dompurify'
 import Button from "../utils/components/button.jsx";
+import ShowAreaChart from "../utils/components/ShowAreaChart.jsx";
+
 
 const Coin = () => {
     const params = useParams()
 
     const [coin,setCoin] = useState([])
+    const [graphData, setGraphData] = useState([])
 
     const url = `https://api.coingecko.com/api/v3/coins/${params.coinId}`
+    const urlCryptoChange = `https://api.coingecko.com/api/v3/coins/${params.coinId}/market_chart?vs_currency=usd&days=7`
 
     useEffect(() => {
         axios.get(url).then((res) => {
@@ -20,11 +24,22 @@ const Coin = () => {
         })
     },[])
 
-    console.log(coin)
+    useEffect(() => {
+        const fetchGraphData = async () => {
+            try {
+                const getData = await fetch(urlCryptoChange)
+                const result = await getData.json()
+                setGraphData(result)
+            }catch (e){
+                console.log(e.message)
+            }
+        }
+        fetchGraphData()
+    },[])
 
     return(
         <div className='flex justify-center mt-20'>
-            <div className="card w-[80%] bg-[#00b289] opacity-90 text-primary-content">
+            <div className="card w-[90%] bg-[#00b289] opacity-90 text-primary-content">
                 <div className="card-body">
                     <div className='flex items-center justify-center'>
                         <h2 className="card-title">{coin.name}</h2>
@@ -34,35 +49,11 @@ const Coin = () => {
                     <p dangerouslySetInnerHTML={{
                         __html: DOMPurify.sanitize(coin.description?.en)
                     }}></p>
+                    <div>
 
-                    <div className='content'>
-                        <table align='center'>
-                            <thead>
-                            <tr className='font-semibold text-black'>
-                                <th>1h</th>
-                                <th>24h</th>
-                                <th>7d</th>
-                                <th>14d</th>
-                                <th>30d</th>
-                                <th>1yr</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr className='text-black'>
-                                <td>{coin.market_data?.price_change_percentage_1h_in_currency.usd.toFixed(1)}%</td>
-                                <td>{coin.market_data?.price_change_percentage_24h_in_currency.usd.toFixed(1)}%</td>
-                                <td>{coin.market_data?.price_change_percentage_7d_in_currency.usd.toFixed(1)}%</td>
-                                <td>{coin.market_data?.price_change_percentage_14d_in_currency.usd.toFixed(1)}%</td>
-                                <td>{coin.market_data?.price_change_percentage_30d_in_currency.usd.toFixed(1)}%</td>
-                                <td>{coin.market_data?.price_change_percentage_1y_in_currency.usd.toFixed(1)}%</td>
-
-                            </tr>
-                            </tbody>
-                        </table>
                     </div>
-
-
-                    <div className="card-actions justify-end">
+                    <ShowAreaChart data={graphData}/>
+                    <div className='flex justify-end mt-10'>
                         <Button
                             href='/market'
                             children='Back'/>

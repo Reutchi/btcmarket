@@ -7,6 +7,7 @@ export const StatisticProvider = ({children}) => {
     const apiCrypto = import.meta.env.VITE_API_CRYPTO_KEY
     const [coins,setCoins] = useState([])
 
+    //All data
     const fetchData = async () => {
         try {
             const getData = await fetch(apiCrypto)
