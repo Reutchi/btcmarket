@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 
 import axios from "axios";
 import DOMPurify from 'dompurify'
+import Button from "../utils/components/button.jsx";
 
 const Coin = () => {
     const params = useParams()
@@ -62,7 +63,9 @@ const Coin = () => {
 
 
                     <div className="card-actions justify-end">
-                        <button className="btn">Buy Now</button>
+                        <Button
+                            href='/market'
+                            children='Back'/>
                     </div>
                 </div>
             </div>

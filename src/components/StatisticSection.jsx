@@ -52,7 +52,7 @@ const StatisticSection = () => {
                 <div className='flex items-center justify-center space-x-2 p-4'>
                     {iconsCrypto}
                     <a href='/market'>View all markets</a>
-                    <i><Icons.arrowVertical/></i>
+                    <Icons.arrowVertical/>
                 </div>
             </div>
 
