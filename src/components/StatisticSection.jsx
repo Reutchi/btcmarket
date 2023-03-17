@@ -7,11 +7,12 @@ import {StatisticContext} from "../context/StatisticContext/StatisticProvider.js
 
 const StatisticSection = () => {
 
+    const {coins,fetchData} = useContext(StatisticContext)
+
     useEffect(() => {
         fetchData()
     }, [])
 
-    const {coins,fetchData} = useContext(StatisticContext)
 
     const iconsCrypto = coins.filter((item) => {
         return item.image;
@@ -41,7 +42,8 @@ const StatisticSection = () => {
                                     />
 
                             )
-                        })}
+                        }).slice(0,5)
+                        }
                         </tbody>
                     </table>
 

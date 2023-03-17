@@ -1,4 +1,4 @@
-import {HeroSection, StatisticSection, WhyBtcSection} from "../components/index.js";
+import {HeroSection, StatisticSection, WhyBtcSection,BenefitsSection} from "../components/index.js";
 
 const MainPage = () => {
     return(
@@ -6,6 +6,7 @@ const MainPage = () => {
             <HeroSection/>
             <StatisticSection/>
             <WhyBtcSection/>
+            <BenefitsSection/>
         </>
     )
 }
