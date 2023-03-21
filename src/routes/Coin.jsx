@@ -8,6 +8,7 @@ import ShowAreaChart from "../utils/components/ShowAreaChart.jsx";
 
 
 const Coin = () => {
+
     const params = useParams()
 
     const [coin,setCoin] = useState([])

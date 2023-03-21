@@ -3,5 +3,5 @@ import HeroSection from './HeroSection.jsx'
 import StatisticSection from "./StatisticSection.jsx";
 import WhyBtcSection from "./WhyBtcSection.jsx";
 import BenefitsSection from "./BenefitsSection.jsx";
-
-export {NavigationSection,HeroSection,StatisticSection,WhyBtcSection,BenefitsSection,}
+import VipProgramSection from "./VipProgramSection.jsx";
+export {NavigationSection,HeroSection,StatisticSection,WhyBtcSection,BenefitsSection,VipProgramSection}

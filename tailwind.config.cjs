@@ -17,6 +17,7 @@ module.exports = {
         'arrowIcon':'url("../src/assets/Arrow.svg")',
       },
       colors:{
+        lightGray:'#FAFAFA',
         lightGreen: '#4CFDC7',
         lightBlack:'#18181B',
       },
