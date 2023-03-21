@@ -22,6 +22,8 @@ export const StatisticProvider = ({children}) => {
         }
     }
 
+
+
     return(
         <StatisticContext.Provider value={{coins,fetchData,isLoading}}>
             {children}

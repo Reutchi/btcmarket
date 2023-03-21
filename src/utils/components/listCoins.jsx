@@ -25,8 +25,8 @@ const ListCoins = ({coin}) => {
                     <td className='hidden md:table-cell'>{coin.market_cap}</td>
                     <td className='p-5 md:p-0 md:table-cell'>
                         <Button
-                            href='/'
-                            children='Buy'
+                            href={`/coin/${coin.id}`}
+                            children='Info'
                             version='bg-lightGreen'/>
                     </td>
                 </tr>
