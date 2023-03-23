@@ -18,13 +18,13 @@ const HeroSection = () => {
                             href='/exchange'
                             children='View exchange'/>
                     </div>
-                    <div className='flex items-center justify-center md:justify-start'>
+                    <div className='rating flex items-center justify-center md:justify-start mt-9'>
                         <Icons.googleIcon/>
-                        <Icons.iconStar/>
-                        <Icons.iconStar/>
-                        <Icons.iconStar/>
-                        <Icons.iconStar/>
-                        <Icons.iconStar/>
+                        <input type="radio" name="rating-1" className="mask mask-star rounded-5xl" />
+                        <input type="radio" name="rating-1" className="mask mask-star rounded-5xl"  />
+                        <input type="radio" name="rating-1" className="mask mask-star rounded-5xl" />
+                        <input type="radio" name="rating-1" className="mask mask-star rounded-5xl" />
+                        <input type="radio" name="rating-1" className="mask mask-star rounded-5xl" />
                         <span>5.0</span>
                     </div>
                 </div>
