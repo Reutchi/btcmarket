@@ -6,7 +6,7 @@ import BenefitsSection from "./BenefitsSection.jsx";
 import VipProgramSection from "./VipProgramSection.jsx";
 import TradingStepsSection from "./TradingStepsSection.jsx";
 import CoinConverter from "./CoinConverter.jsx";
-
+import TradeOnSection from "./TradeOnSection.jsx";
 export {
     NavigationSection,
     HeroSection,
@@ -16,4 +16,5 @@ export {
     VipProgramSection,
     TradingStepsSection,
     CoinConverter,
+    TradeOnSection,
 }

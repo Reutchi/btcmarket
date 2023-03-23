@@ -33,14 +33,13 @@ const TradingStepsSection = () => {
                         version='bg-lightGreen px-8'
                         children='Get started'
                     />
-                    <div className='flex items-center justify-center md:justify-center mt-9'>
-                        <Icons.googleIcon/>
-                        <Icons.iconStar/>
-                        <Icons.iconStar/>
-                        <Icons.iconStar/>
-                        <Icons.iconStar/>
-                        <Icons.iconStar/>
-                        <span>5.0</span>
+                    <div className='rating flex items-center justify-center md:justify-center mt-9'>
+                            <Icons.googleIcon/>
+                            <input type="radio" name="rating-1" className="mask mask-star" />
+                            <input type="radio" name="rating-1" className="mask mask-star"  />
+                            <input type="radio" name="rating-1" className="mask mask-star" />
+                            <input type="radio" name="rating-1" className="mask mask-star" />
+                            <input type="radio" name="rating-1" className="mask mask-star" />
                     </div>
                 </div>
             </div>
