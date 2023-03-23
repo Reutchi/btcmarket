@@ -1,4 +1,5 @@
 import {createContext, useState} from "react";
+import axios from "axios";
 
 export const StatisticContext = createContext({})
 
@@ -8,20 +9,20 @@ export const StatisticProvider = ({children}) => {
     const [coins,setCoins] = useState([])
     const [isLoading,setIsLoading] = useState(false)
 
-    //All data
     const fetchData = async () => {
         try {
             setIsLoading(true)
-            const getData = await fetch(apiCrypto)
-            const result = await getData.json()
-            setCoins(result)
-            setIsLoading(false)
+            const getData = axios.get(apiCrypto)
+                .then(res => res.data)
+                .then(data => {
+                    setCoins(data)
+                    setIsLoading(false)
+                })
         }catch (e){
-            console.log(e.message)
+            console.log(e)
             setIsLoading(false)
         }
     }
-
 
 
     return(

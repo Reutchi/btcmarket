@@ -14,7 +14,6 @@ const StatisticSection = () => {
         fetchData()
     }, [])
 
-
     const iconsCrypto = coins.filter((item) => {
         return item.image;
     }).map((item) => {
