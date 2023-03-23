@@ -11,10 +11,11 @@ const Exchange = () => {
     }, [])
 
     return(
-        <section className='fixed w-[80%] left-[50%] top-[20%] ml-[-40.5%]'>
-            <div className='pt-20 flex mx-auto card w-[90%] bg-[#00b289] opacity-90'>
+        <section>
+            <div className='pt-20 mx-auto card w-[90%] bg-[#00b289] opacity-90'>
                 <h2 className='text-center text-4xl pb-8'>Convert Crypto</h2>
-                <div className='flex justify-center p-10'>
+                <p className='mx-auto w-3/4'>What Is Cryptocurrency? In simple words, cryptocurrency is a digital asset. The name originates from the fact that all of its transactions are highly encrypted, making the exchanges highly secure. It is decentralised in nature, unlike traditional currencies, which are managed and controlled by a central authority.</p>
+                <div className='p-10'>
                     <CoinConverter
                         fromCoin="bitcoin"
                         toCoin="usd"
