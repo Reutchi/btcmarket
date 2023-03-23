@@ -1,4 +1,4 @@
-import CoinConverter from "../components/CoinConverter.jsx";
+import {CoinConverter} from "../components/index.js";
 import {useContext, useEffect} from "react";
 import {StatisticContext} from "../context/StatisticContext/StatisticProvider.jsx";
 
