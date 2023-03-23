@@ -15,6 +15,7 @@ const HeroSection = () => {
                             version='bg-lightGreen'
                             children='Get started'/>
                         <Button
+                            href='/exchange'
                             children='View exchange'/>
                     </div>
                     <div className='flex items-center justify-center md:justify-start'>
