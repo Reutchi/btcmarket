@@ -12,7 +12,7 @@ const VipProgramSection = () => {
                 </h2>
                 <p className="max-w-sm mx-auto mb-12 text-sm md:max-w-full md:text-lg">
                     Access world-class APIs, a lower fee structure and a dedicated Account Manager.</p>
-                <ul className='flex flex-col justify-center space-x-12 md:flex-row'>
+                <ul className='flex flex-col justify-center space-x-12 md:flex-row items-baseline'>
                     <li className='flex'><VIPprogramIcons.iconLight/>API integrations</li>
                     <li className='flex'><VIPprogramIcons.circleIcon/>Lower fees</li>
                     <li className='flex'><VIPprogramIcons.profileIcon/>Dedicated Account Manager</li>

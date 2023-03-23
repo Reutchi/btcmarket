@@ -20,6 +20,7 @@ module.exports = {
         lightGray:'#FAFAFA',
         lightGreen: '#4CFDC7',
         lightBlack:'#18181B',
+        lightWhite:'#FCFBF8'
       },
       fontFamily:{
         sans:['Lexend', 'sans-serif']
