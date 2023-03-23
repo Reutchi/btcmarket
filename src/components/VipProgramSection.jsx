@@ -4,7 +4,7 @@ import  {VIPprogramIcons} from "../utils/data/icons";
 
 const VipProgramSection = () => {
     return(
-        <section className='bg-lightGray'>
+        <section id='vip-program-section' className='bg-lightGray'>
             <div className="container mx-auto px-6  py-8 text-center md:pt-32 pb-52">
                 <p>VIP Program</p>
                 <h2 className="max-w-lg mx-auto mb-8 text-3xl  leading-normal mt-4 md:text-4xl">
@@ -12,7 +12,7 @@ const VipProgramSection = () => {
                 </h2>
                 <p className="max-w-sm mx-auto mb-12 text-sm md:max-w-full md:text-lg">
                     Access world-class APIs, a lower fee structure and a dedicated Account Manager.</p>
-                <ul className='flex flex-col justify-center space-x-12 md:flex-row items-baseline'>
+                <ul className='flex flex-col justify-center md:space-x-12 md:flex-row'>
                     <li className='flex'><VIPprogramIcons.iconLight/>API integrations</li>
                     <li className='flex'><VIPprogramIcons.circleIcon/>Lower fees</li>
                     <li className='flex'><VIPprogramIcons.profileIcon/>Dedicated Account Manager</li>

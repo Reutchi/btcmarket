@@ -22,7 +22,7 @@ const StatisticSection = () => {
 
 
     return(
-        <section className='w-full'>
+        <section id='statistic-section' className='w-full'>
             <div className='mx-auto border border-3xl w-[90%]  rounded-lg'>
                 <nav className='border-b'>
                     <ul className='flex justify-center space-x-10 pb-8 pt-6'>
