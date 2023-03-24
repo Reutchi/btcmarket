@@ -5,7 +5,7 @@ import Icons from "../utils/data/icons";
 const HeroSection = () => {
     const heroSection = {title:'Buy, sell and trade crypto today',description:'Trade with confidence and build your future with Australia’s fastest crypto exchange.'}
     return(
-        <section className='container mx-auto p-6'>
+        <section id='hero-section' className='container mx-auto p-6'>
             <div className='flex flex-col-reverse flex-col md:flex-row justify-between mt-32'>
                 <div className='flex flex-col space-y-10 lg:mt-16 lg:w-1/2'>
                         <h1 className='text-2xl md:text-5xl lg:text-7xl p-4 md:p-0'>{heroSection.title}</h1>
