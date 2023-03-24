@@ -4,7 +4,7 @@ import  {VIPprogramIcons} from "../utils/data/icons";
 
 const VipProgramSection = () => {
     return(
-        <section id='vip-program-section' className='bg-lightGray'>
+        <section id='vip-program-section'>
             <div className="container mx-auto px-6  py-8 text-center md:pt-32 pb-52">
                 <p>VIP Program</p>
                 <h2 className="max-w-lg mx-auto mb-8 text-3xl  leading-normal mt-4 md:text-4xl">
