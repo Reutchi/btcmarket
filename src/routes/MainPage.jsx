@@ -4,7 +4,9 @@ import {
     WhyBtcSection,
     BenefitsSection,
     VipProgramSection,
-    TradingStepsSection, TradeOnSection
+    TradingStepsSection,
+    TradeOnSection,
+    CryptoNewsSection,
 } from "../components/index.js";
 
 const MainPage = () => {
@@ -17,6 +19,7 @@ const MainPage = () => {
             <VipProgramSection/>
             <TradingStepsSection/>
             <TradeOnSection/>
+            <CryptoNewsSection/>
         </>
     )
 }

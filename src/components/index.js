@@ -7,6 +7,7 @@ import VipProgramSection from "./VipProgramSection.jsx";
 import TradingStepsSection from "./TradingStepsSection.jsx";
 import CoinConverter from "./CoinConverter.jsx";
 import TradeOnSection from "./TradeOnSection.jsx";
+import CryptoNewsSection from "./CryptoNewsSection.jsx"
 export {
     NavigationSection,
     HeroSection,
@@ -17,4 +18,5 @@ export {
     TradingStepsSection,
     CoinConverter,
     TradeOnSection,
+    CryptoNewsSection,
 }
