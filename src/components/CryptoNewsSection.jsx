@@ -18,7 +18,7 @@ const CryptoNewsSection = () => {
     ]
 
     return(
-        <section className='pt-32'>
+        <section id='crypto-news-section' className='pt-32'>
             <h3 className='text-center text-3xl'>Find out the latest crypto news</h3>
             <div className='grid grid-cols-1 gap-2 md:grid-cols-3 place-items-center pt-16 space-y-10 md:space-x-8 md:space-y-0'>
                 {newsCards.map((card) => {
