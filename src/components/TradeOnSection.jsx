@@ -3,7 +3,7 @@ import appStore from '../assets/appStore.png'
 
 const TradeOnSection = () => {
     return(
-        <section>
+        <section id='trade-on-section'>
             <div className='container mx-auto p-6 mt-80'>
                 <h3 className='text-4xl md:text-5xl pb-6'>Trade on the go</h3>
                 <p className='md:w-[35%] pb-8'>

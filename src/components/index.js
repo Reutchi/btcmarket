@@ -8,6 +8,8 @@ import TradingStepsSection from "./TradingStepsSection.jsx";
 import CoinConverter from "./CoinConverter.jsx";
 import TradeOnSection from "./TradeOnSection.jsx";
 import CryptoNewsSection from "./CryptoNewsSection.jsx"
+import CreateAccountSection from './CreateAccountSection.jsx'
+
 export {
     NavigationSection,
     HeroSection,
@@ -19,4 +21,5 @@ export {
     CoinConverter,
     TradeOnSection,
     CryptoNewsSection,
+    CreateAccountSection,
 }

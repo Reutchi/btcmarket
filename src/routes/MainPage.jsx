@@ -6,7 +6,7 @@ import {
     VipProgramSection,
     TradingStepsSection,
     TradeOnSection,
-    CryptoNewsSection,
+    CryptoNewsSection, CreateAccountSection,
 } from "../components/index.js";
 
 const MainPage = () => {
@@ -20,6 +20,7 @@ const MainPage = () => {
             <TradingStepsSection/>
             <TradeOnSection/>
             <CryptoNewsSection/>
+            <CreateAccountSection/>
         </>
     )
 }
