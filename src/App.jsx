@@ -1,6 +1,6 @@
 import './App.css'
 
-import {NavigationSection} from './components/index.js'
+import {FooterSection, NavigationSection} from './components/index.js'
 import {MainPage, Page404, Coin, AllMarkets, Exchange} from './routes/index.jsx'
 
 import {Route, Routes} from "react-router-dom";
@@ -22,6 +22,7 @@ function App() {
                     <Route path='/market' element={<AllMarkets/>}/>
                     <Route path="*" element={<Page404 />} />
                 </Routes>
+                <FooterSection/>
                 </ConvertCryptoProvider>
             </StatisticProvider>
   )
