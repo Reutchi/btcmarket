@@ -9,6 +9,13 @@ export const StatisticProvider = ({children}) => {
     const [coins,setCoins] = useState([])
     const [isLoading,setIsLoading] = useState(false)
 
+    const [visible,setVisible] = useState(51)
+    const [search,setSearch] = useState('')
+
+    const showMore = () => {
+        setVisible(prevState => prevState + 5)
+    }
+
     const fetchData = async () => {
         try {
             setIsLoading(true)
@@ -26,7 +33,7 @@ export const StatisticProvider = ({children}) => {
 
 
     return(
-        <StatisticContext.Provider value={{coins,fetchData,isLoading}}>
+        <StatisticContext.Provider value={{coins,fetchData,isLoading,visible,search,showMore,setSearch}}>
             {children}
         </StatisticContext.Provider>
     )

@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from "react";
+import {useContext, useEffect} from "react";
 import {StatisticContext} from "../context/StatisticContext/StatisticProvider.jsx";
 import ListCoins from "../utils/components/listCoins.jsx";
 import Button from "../utils/components/button.jsx";
@@ -6,21 +6,17 @@ import {RingLoader} from "react-spinners";
 
 const AllMarkets = () => {
 
-    const {coins,fetchData,isLoading} = useContext(StatisticContext)
+    const {coins,fetchData,isLoading,visible,search,setSearch,showMore} = useContext(StatisticContext)
 
     useEffect(() => {
         fetchData()
     }, [])
 
-    const [visible,setVisible] = useState(11)
-
-    const showMore = () => {
-        setVisible(prevState => prevState + 5)
-    }
 
     return(
         <section className='mt-32'>
-            <div className='flex justify-center'>
+            <input onChange={(e) => setSearch(e.target.value)} type="text" placeholder="Search your favorite Crypto" className="block mx-auto input input-bordered input-accent w-full max-w-xs" />
+            <div className='mt-10 flex justify-center'>
                 {   isLoading
                     ? <div className='flex justify-center'><RingLoader color='#36d7b7' /></div>
                     : <table className='w-full'>
@@ -31,10 +27,17 @@ const AllMarkets = () => {
                             <th className='hidden md:table-cell'>24hr Change</th>
                             <th className='hidden md:table-cell'>Market Cap</th>
                         </tr>
-                        {coins.slice(0,visible).map((coin,index) => {
+                        {coins
+                            .filter((coin) =>{
+                                const searchTerm = search.toLowerCase()
+                                const coinName =  coin.id.toLowerCase()
+                            return  searchTerm === '' ? coin : coinName.includes(searchTerm)
+                          })
+                            .slice(0,visible)
+                            .map((coin) => {
                             return(
                                     <ListCoins
-                                        key={index}
+                                        key={coin.id}
                                         coin={coin}
                                     />
                             )
