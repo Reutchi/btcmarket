@@ -10,6 +10,8 @@ import TradeOnSection from "./TradeOnSection.jsx";
 import CryptoNewsSection from "./CryptoNewsSection.jsx"
 import CreateAccountSection from './CreateAccountSection.jsx'
 import FooterSection from "./FooterSection.jsx";
+import CookieBanner from "./CookieBanner.jsx";
+
 export {
     NavigationSection,
     HeroSection,
@@ -23,4 +25,5 @@ export {
     CryptoNewsSection,
     CreateAccountSection,
     FooterSection,
+    CookieBanner,
 }
