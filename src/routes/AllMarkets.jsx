@@ -15,7 +15,7 @@ const AllMarkets = () => {
 
     return(
         <section className='mt-32'>
-            <input onChange={(e) => setSearch(e.target.value)} type="text" placeholder="Search your favorite Crypto" className="block mx-auto input input-bordered input-accent w-full max-w-xs" />
+            <input autoFocus onChange={(e) => setSearch(e.target.value)} type="text" placeholder="Search your favorite Crypto" className="block mx-auto input input-bordered input-accent w-full max-w-xs" />
             <div className='mt-10 flex justify-center'>
                 {   isLoading
                     ? <div className='flex justify-center'><RingLoader color='#36d7b7' /></div>
