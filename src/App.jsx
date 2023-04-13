@@ -1,7 +1,7 @@
 import './App.css'
 
 import {CookieBanner, FooterSection, NavigationSection} from './components/index.js'
-import {MainPage, Page404, Coin, AllMarkets, Exchange} from './routes/index.jsx'
+import {MainPage, Page404, Coin, AllMarkets, Exchange, CookiePolicy} from './routes/index.jsx'
 
 import {Route, Routes} from "react-router-dom";
 import {StatisticProvider} from './context/StatisticContext/StatisticProvider.jsx'
@@ -20,7 +20,8 @@ function App() {
                     <Route path='/coin' element={<Coin/>}>
                         <Route path=':coinId' element={<Coin/>}/>
                     </Route>
-                        <Route path='/exchange' element={<Exchange/>}/>
+                    <Route path='/exchange' element={<Exchange/>}/>
+                    <Route path='/terms' element={<CookiePolicy/>}/>
                     <Route path='/market' element={<AllMarkets/>}/>
                     <Route path="*" element={<Page404 />} />
                 </Routes>
