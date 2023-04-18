@@ -1,11 +1,13 @@
 import './App.css'
 
-import {NavigationSection} from './components/index.js'
-import {MainPage, Page404, Coin, AllMarkets, Exchange} from './routes/index.jsx'
+import {CookieBanner, FooterSection, NavigationSection} from './components/index.js'
+import {MainPage, Page404, Coin, AllMarkets, Exchange, CookiePolicy} from './routes/index.jsx'
 
 import {Route, Routes} from "react-router-dom";
 import {StatisticProvider} from './context/StatisticContext/StatisticProvider.jsx'
 import {ConvertCryptoProvider} from "./context/ConvertCryptoContext/ConvertCryptoContext";
+
+import posthog from "posthog-js";
 
 function App() {
 
@@ -18,10 +20,13 @@ function App() {
                     <Route path='/coin' element={<Coin/>}>
                         <Route path=':coinId' element={<Coin/>}/>
                     </Route>
-                        <Route path='/exchange' element={<Exchange/>}/>
+                    <Route path='/exchange' element={<Exchange/>}/>
+                    <Route path='/terms' element={<CookiePolicy/>}/>
                     <Route path='/market' element={<AllMarkets/>}/>
                     <Route path="*" element={<Page404 />} />
                 </Routes>
+                <FooterSection/>
+                {posthog.has_opted_in_capturing() || posthog.has_opted_out_capturing() ? null : <CookieBanner/>}
                 </ConvertCryptoProvider>
             </StatisticProvider>
   )

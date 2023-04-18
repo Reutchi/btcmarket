@@ -12,15 +12,19 @@ module.exports = {
     extend: {
       boxShadow:{
         '3xl': '0px 0px 16px rgba(9, 24, 26, 0.04)',
-      },
+        '2xl': '0px 0px 16px rgba(9, 24, 26, 0.04)',
+},
       content:{
         'arrowIcon':'url("../src/assets/Arrow.svg")',
       },
       colors:{
         lightGray:'#FAFAFA',
         lightGreen: '#4CFDC7',
+        whiteGreen:'#BDFFEB',
         lightBlack:'#18181B',
-        lightWhite:'#FCFBF8'
+        lightWhite:'#FCFBF8',
+        transparentBlack:'rgba(0,0,0,0.8)',
+
       },
       fontFamily:{
         sans:['Lexend', 'sans-serif']

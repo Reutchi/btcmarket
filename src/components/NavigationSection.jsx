@@ -2,6 +2,7 @@ import Logo from '../assets/Logo.svg'
 
 import Button from "../utils/components/button.jsx";
 import MobileMenu from "../utils/components/MobileMenu/MobileMenu.jsx";
+import {useCallback, useEffect, useState} from "react";
 
 
 const NavigationSection = () => {
@@ -14,9 +15,25 @@ const NavigationSection = () => {
         {id:5, href:'/', title:'Learn', options: {first:'About', last:'Contact'}},
         {id:6, href:'/', title:'Help', options: {first:'About', last:'Contact'}},
     ]
+    const [y, setY] = useState(document.scrollingElement.scrollHeight);
+    const [scrollDirection, setScrollDirection] = useState(true);
+
+    const handleNavigation = useCallback(() => {
+        y > window.scrollY ? setScrollDirection(true) : setScrollDirection(false)
+        setY(window.scrollY)
+    }, [y]);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleNavigation);
+
+        return () => {
+            window.removeEventListener("scroll", handleNavigation);
+        };
+    }, [handleNavigation]);
+
 
     return(
-        <nav className="relative container mx-auto p-6">
+        <nav className={`fixed  z-50 top-0 left-0 right-0 md:bg-white  transition-transform duration-300 ease-in-out container mx-auto p-6 ${scrollDirection ?  null : 'md:-translate-y-80'}`}>
             <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-20">
                     <figure>

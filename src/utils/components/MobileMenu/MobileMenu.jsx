@@ -1,16 +1,22 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import './mobileMenu.css/'
 import Button from "../button.jsx";
 
 const MobileMenu = ({menuListItems}) => {
     const [openMenu, setOpenMenu] = useState(false);
 
-    const  toggleMenu = () => {
-        setOpenMenu(!openMenu)
-    }
+    const  toggleMenu = () => setOpenMenu(!openMenu)
+    const handleCloseMenu = (e) => e.key === 'Escape' ? setOpenMenu(false) : null
+    useEffect(() => {
+        document.addEventListener('keydown', handleCloseMenu)
+        return () => {
+            document.removeEventListener('keydown',handleCloseMenu)
+        }
+    },[])
+
     return(
         <>
-            <button id="menu-btn" onClick={toggleMenu} className={`${openMenu ? 'open z-30 block lg:hidden focus:outline-none hamburger' : 'z-30 block lg:hidden focus:outline-none hamburger'}`}>
+            <button id="menu-btn" onClick={toggleMenu} className={`${openMenu ? 'open overflow-y-hidden z-30 block lg:hidden focus:outline-none hamburger' : 'z-30 block lg:hidden focus:outline-none hamburger'}`}>
                 <span className="span hamburger-top"></span>
                 <span className="span hamburger-middle"></span>
                 <span className="span hamburger-bottom"></span>
@@ -30,8 +36,6 @@ const MobileMenu = ({menuListItems}) => {
                     <Button href='/' children='Sign Up' version='bg-lightGreen'/>
                 </div>
             </div>
-
-
         </>
     )
 }

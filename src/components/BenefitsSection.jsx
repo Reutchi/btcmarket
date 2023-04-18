@@ -30,7 +30,7 @@ const BenefitsSection = () => {
     }
 
         return(
-        <section id='benefits-section' className='container mx-auto p-8 mt-44 pb-48'>
+        <section id='benefits-section' className='container mx-auto overflow-y-hidden p-8 mt-44 pb-48'>
             <div className='flex items-center'>
                 <div>
                     <span>{sectionBenefits.sectionTrade}</span>
