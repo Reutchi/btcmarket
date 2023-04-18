@@ -24,12 +24,12 @@ const CryptoNewsSection = () => {
                 {newsCards.map((card) => {
                     return(
                         <CryptoNewsCard
-                        key={card.id}
-                        title={card.title}
-                        date={card.date}
-                        alt={card.title}
-                        href='/'
-                        img={card.img}
+                            key={card.id}
+                            title={card.title}
+                            date={card.date}
+                            alt={card.title}
+                            href='/'
+                            img={card.img}
                         />
                     )
                 })}
@@ -42,7 +42,7 @@ const CryptoNewsSection = () => {
                             className='flex justify-center items-center space-x-2'>
                             {social.icon}
                             <a target='_blank'
-                                href={social.href}>{social.title}</a>
+                               href={social.href}>{social.title}</a>
                         </li>
                     )
                 })}

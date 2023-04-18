@@ -31,8 +31,9 @@ const NavigationSection = () => {
         };
     }, [handleNavigation]);
 
+
     return(
-        <nav className={`fixed  z-50 top-0 left-0 right-0 md:bg-white  transition-transform duration-300 ease-in-out container mx-auto p-6 ${scrollDirection ?  null : '-translate-y-80'}`}>
+        <nav className={`fixed  z-50 top-0 left-0 right-0 md:bg-white  transition-transform duration-300 ease-in-out container mx-auto p-6 ${scrollDirection ?  null : 'md:-translate-y-80'}`}>
             <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-20">
                     <figure>

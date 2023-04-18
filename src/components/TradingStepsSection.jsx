@@ -9,7 +9,7 @@ const TradingStepsSection = () => {
     ]
 
     return(
-        <section id='trading-steps-section' className='pt-32'>
+        <section id='trading-steps-section' className='pt-32 overflow-y-hidden'>
             <h2 className='text-center w-1/2 md:w-full text-2xl  md:text-5xl pb-20 w-96	mx-auto'>
                 Start trading in 3 easy steps
             </h2>
